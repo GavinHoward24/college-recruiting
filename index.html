@@ -1,11 +1,13 @@
 
+
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gavin Howard - Basketball Recruiting Highlights</title>
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Gavin Howard - Basketball Recruiting Highlights</title>
+<style>
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -36,7 +38,11 @@
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
         }
         section h2 {
-            color: #2c3e50;
+            color: white;
+        }
+
+        .about-me {
+            text-align: center
         }
 
         .highlight-reels {
@@ -49,7 +55,7 @@
         }
 
         .video-showcase {
-            text-align: center;            
+            text-align: center;
         }
 
         .video-showcase {
@@ -119,6 +125,9 @@
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
         }
 
+        .my-stats { 
+            text-align: center;
+        }
 
         .my-stats table {
             width: 100%;
@@ -134,20 +143,28 @@
             color: white;
         }
 
-
+        .coach-contact { 
+            text-align: center;
+        }
 
         .coach-contact table {
             width: 100%;
             border-collapse: collapse;
+ 
         }
         .coach-contact th, .upcoming-games td {
             border: 1px solid #ddd;
             padding: 8px;
-            text-align: left;
+            text-align: center;
         }
         .coach-contact th {
             background-color: #2c3e50;
             color: white;
+        }
+
+        .upcoming-games {
+            text-align: center;
+            border-collapse: collapse;
         }
 
         .upcoming-games table {
@@ -157,7 +174,7 @@
         .upcoming-games th, .upcoming-games td {
             border: 1px solid #ddd;
             padding: 8px;
-            text-align: left;
+            text-align: center;
         }
         .upcoming-games th {
             background-color: #2c3e50;
@@ -165,7 +182,7 @@
         }
 
         .connect-with-me {
-            
+            text-align: center;
             margin: 20px 0;
         }
         .connect-with-me a {
@@ -178,6 +195,9 @@
             color: #2c3e50;
         }
 
+        .contact-me {
+            text-align: center;
+        }
 
         .contact-me form {
             display: flex;
@@ -208,311 +228,354 @@
             bottom: 0;
         }
     </style>
+
+<style>
+    body {
+        font-family: 'Segoe UI', sans-serif;
+        background: url('https://www.transparenttextures.com/patterns/hexellence.png');
+        background-color: #e8eff5;
+        color: #333;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background: linear-gradient(135deg, #1f3b4d, #27496d);
+        color: white;
+        text-align: center;
+        padding: 30px 10px;
+    }
+    nav {
+        background: #2c3e50;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+        padding: 10px;
+    }
+    nav button {
+        background: #f4f4f4;
+        color: #2c3e50;
+        border: none;
+        padding: 10px 15px;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background 0.3s;
+    }
+    nav button:hover {
+        background: #d1e3f0;
+    }
+
+    section.collapsible {
+        background: white;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        margin: 20px auto;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
+        max-width: 1000px;
+    }
+    section.collapsible.closed {
+        max-height: 0;
+        padding: 0;
+        margin: 0;
+        opacity: 0;
+        pointer-events: none;
+    }
+    section h2 {
+        margin-top: 0;
+        padding: 15px;
+        background: #27496d;
+        color: white;
+        cursor: pointer;
+        font-size: 1.2em;
+    }
+</style>
+<script>
+    function toggleSection(id) {
+        const el = document.getElementById(id);
+        if (el) el.classList.toggle('closed');
+    }
+</script>
 </head>
 <body>
-    <header>
-        <h1>Gavin Howard - Basketball Recruiting Highlights</h1>
-        <p>Class of 2026 | SG/SF/PF | 6'5" | 190 lbs | Leander Vista Ridge High School</p>
-    </header>
+<header>
+<h1>Gavin Howard - Basketball Recruiting Highlights</h1>
+<p>Class of 2026 | SG/SF/PF | 6'5" | 190 lbs | Leander Vista Ridge High School</p>
+</header>
+<nav>
+<button onclick="toggleSection('about')">About Me</button>
+<button onclick="toggleSection('reels')">Highlight Reels</button>
+<button onclick="toggleSection('games')">Full Game Footage</button>
+<button onclick="toggleSection('stats')">My Stats</button>
+<button onclick="toggleSection('coach')">Coach Info</button>
+<button onclick="toggleSection('schedule')">Schedule</button>
+<button onclick="toggleSection('gallery')">Photo Gallery</button>
+<button onclick="toggleSection('connect')">Social Media Connect</button>
+<button onclick="toggleSection('contact')">Contact Me</button>
+</nav>
 
-    <div class="container">
 
-       
-         <section class="about-me">
-            <h2>About Me</h2>
-            <p>My name is Gavin Howard, I’m a high school basketball player from Austin, TX, with a strong interest in competing at the collegiate level. I currently play for Vista Ridge High School in Cedar Park, TX, entering my senior year. During the summer, I competed with Houston Hoops CTX 17U Miller. Standing at 6’5” and weighing 190 pounds, I’m focused on elevating my play this fall to enhance my performance for the upcoming season.</p>
-            <p>On the court, I’m a versatile wing, I play shooting guard, small forward, and power forward for both my school and club teams. I’m capable of guarding all five positions and often help bring the ball up to initiate the offense. During my junior year, I earned First-Team All-District honors in Region 25-6A. As I approach my senior year, my goal is to secure District MVP recognition. Having started on varsity as a sophomore and junior, I’ve been honored to serve as a team captain in both years. I strive to lead by example, foster inclusivity with younger players and cultivate a positive team environment to earn the respect of my teammates. For my senior season, I aim to surpass 1,250 career points and help guide our program to the playoffs for the first time since 2017.</p>
-            <p>Academically, I’m a member of the National Honor Society, maintaining a 3.9 GPA and a 4.9 weighted GPA. I scored 1260 on my SAT (600 Writing, 660 Math) and have earned and will contrinue to earn dual credit hours through courses at my local community college.</p>
-            <p>Thank you for considering my profile. I would welcome the opportunity to meet and discuss how I could contribute to your program after graduating in 2026. Please let me know if there’s additional information or footage you’d like to review to assess my fit for your team. I’m confident that, given the chance, I can make a meaningful impact on your program.</p>
-            <p>Below, I’ve included highlight films from my junior year of high school, TABC Showcase and my summer AAU season. I’ll continue to update these highlights as the Fall progresses. Additionally, I’ve provided a completed schedule of my team’s upcoming/completed events, should you like to see the recap or have the opportunity to watch me play in person.</p>
-        </section>
+<div class="container">
+<section class="about-me collapsible" id="about">
+<h2>ABOUT ME</h2>
+<p>My name is Gavin Howard, I’m a high school basketball player from Austin, TX, with a strong interest in competing at the collegiate level. I currently play for Vista Ridge High School in Cedar Park, TX, entering my senior year. During the summer, I competed with Houston Hoops CTX 17U Miller. Standing at 6’5” and weighing 190 pounds, I’m focused on elevating my play this fall to enhance my performance for the upcoming season.</p>
+<p>On the court, I’m a versatile wing, I play shooting guard, small forward and power forward for both my school and club teams. I’m capable of guarding all five positions and often help bring the ball up to initiate the offense. During my junior year, I earned First-Team All-District honors in Region 25-6A. As I approach my senior year, my goal is to secure District MVP recognition. Having started on varsity as a sophomore and junior, I’ve been honored to serve as a team captain in both years. I strive to lead by example, foster inclusivity with younger players and cultivate a positive team environment to earn the respect of my teammates. For my senior season, I aim to surpass 1,250 career points and help guide our program to the playoffs for the first time since 2017.</p>
+<p>Academically, I’m a member of the National Honor Society, maintaining a 3.9 GPA and a 4.9 weighted GPA. I scored 1260 on my SAT (600 Writing, 660 Math) and have earned and will contrinue to earn dual credit hours through courses at my local community college.</p>
+<p>Thank you for considering my profile. I would welcome the opportunity to meet and discuss how I could contribute to your program after graduating in 2026. Please let me know if there’s additional information or footage you’d like to review to assess my fit for your team. I’m confident that, given the chance, I can make a meaningful impact on your program.</p>
+<p>Below, I’ve included highlight films from my junior year of high school, TABC Showcase and my summer AAU season. I’ll continue to update these highlights as the Fall progresses. Additionally, I’ve provided a completed schedule of my team’s upcoming/completed events, should you like to see the recap or have the opportunity to watch me play in person.</p>
+</section>
 
-        <section class="highlight-reels">
-            <h2>Highlight Reels</h2>
-            <p>Check out my latest basketball highlights!</p>
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?si=5Rjw9IZrGTYld5Oo&amp;list=PLHNPiUdTc6qIWIQ046Rk8sdLxs0NvJJkz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-        </section>
-   
-        <section class="video-showcase">
-            <h2>Game Footage & Skill Clips</h2>
-            <p>Below are full games where I showcase various skills, decision-making, and defensive versatility.</p>
-    
-            <div class="video-item">
-                <iframe width="320" height="180" src="https://www.youtube.com/embed/yTlKD3NvHEI?si=nOfp_jMWAJW_i2c4" 
-                     title="Video 1" frameborder="0" allowfullscreen></iframe>
-            <p><strong>April 19, 2025 vs. Young Pro Rodgers
-            <p>The Circuit - Rumble in the Plex</strong>
-                <p>Strong all-around performance against a team with bigger centers - transition finishes and solid rebounding.</p>
-                <p>11 points, 7 rebounds (3 offensive), 1 assist, 3 steals</p>
-            </div>
 
-            <div class="video-item">
-                <iframe width="320" height="180" src="https://www.youtube.com/embed/U6q8vU4n2yk?si=Qh5MhgR3HTSQdLK0" 
-                    title="Video 2" frameborder="0" allowfullscreen></iframe>
-            <p><strong> May 4, 2025 vs. BTB Unsigned (Robles)
-            <p>Alamo City Hoops - Capitol City Showdown</strong>
-                 <p>Strong 3 point shooting, solid rebounding and team-oriented playmaking.</p>
-                 <p>22 points (4/5 on 3s), 8 rebounds (3 offensive), 5 assists</p>
+<section class="highlight-reels collapsible" id="reels">
+<h2>HIGHLIGHT REELS</h2>
+<p>Check out my latest basketball highlights!</p>
+<iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/videoseries?si=5Rjw9IZrGTYld5Oo&amp;list=PLHNPiUdTc6qIWIQ046Rk8sdLxs0NvJJkz" title="YouTube video player" width="560"></iframe>
+</section>
 
-            <div class="video-item">
-                <iframe width="320" height="180" src="https://www.youtube.com/embed/8eie5rth8xE?si=midzhNSZoUNqaQAd" 
-                    title="Video 3" frameborder="0" allowfullscreen></iframe>
-            <p><strong> July 10, 2025 vs. Dallas Longhorns 2026:
-            <p>GASO Live Championships</strong>
-                 <p>Clutch late overall play to help secure the win - last 4:21 of game 7 pts, 2 offensive rebounds, 2 steals and a big 3.</p>
-                 <p>9 points, 7 rebounds (4 offensive), 2 assists, 3 steals</p>
 
-            <div class="video-item">
-                <iframe width="320" height="180" src="https://www.youtube.com/embed/OiSgPDTcftc?si=XK6K60HkiwSmDqe_" 
-                    title="Video 4" frameborder="0" allowfullscreen></iframe>
-            <p><strong> May 18, 2025 vs. Midwest Stampede South (MI)
-            <p>Memphis, TN Showcase:</strong>
-                 <p>Solid all around game in last game of weekend.</p>
-                 <p>20 points (3/6 on 3s), 6 rebounds (3 offensive), 4 assists, 3 steals</p>
-
-            <div class="video-item">
-                <iframe width="320" height="180" src="https://www.youtube.com/embed/yAS9O3Wvl5w?si=bxSdyAsfhzjKPE1y" 
-                    title="Video 5" frameborder="0" allowfullscreen></iframe>
-            <p><strong> July 11, 2025 vs. Top Acheivers Elite (part 1) 
-            <p>GASO Live Championships</strong>
-                 <p>Solid defensive performance on 6'-10", 250lb+ center - who broke the backboard; hence part 2 at 2nd venue.
+<section class="video-showcase collapsible" id="games">
+<h2><font color="white">GAME FOOTAGE</font></h2>
+<p>Below are full game videos</p>
+<div class="video-item">
+<iframe allowfullscreen="" frameborder="0" height="180" src="https://www.youtube.com/embed/yTlKD3NvHEI?si=nOfp_jMWAJW_i2c4" title="Video 1" width="320"></iframe>
+<p><strong>April 19, 2025 vs. Young Pro Rodgers
+            <p>The Circuit - Rumble in the Plex</p></strong>
+<p>Strong all-around performance against a team with bigger centers - transition finishes and solid rebounding.</p>
+<p>11 points, 7 rebounds (3 offensive), 1 assist, 3 steals</p>
+</p></div>
+<div class="video-item">
+<iframe allowfullscreen="" frameborder="0" height="180" src="https://www.youtube.com/embed/U6q8vU4n2yk?si=Qh5MhgR3HTSQdLK0" title="Video 2" width="320"></iframe>
+<p><strong> May 4, 2025 vs. BTB Unsigned (Robles)
+            <p>Alamo City Hoops - Capitol City Showdown</p></strong>
+<p>Strong 3 point shooting, solid rebounding and team-oriented playmaking.</p>
+<p>22 points (4/5 on 3s), 8 rebounds (3 offensive), 5 assists</p>
+<div class="video-item">
+<iframe allowfullscreen="" frameborder="0" height="180" src="https://www.youtube.com/embed/8eie5rth8xE?si=midzhNSZoUNqaQAd" title="Video 3" width="320"></iframe>
+<p><strong> July 10, 2025 vs. Dallas Longhorns 2026:
+            <p>GASO Live Championships</p></strong>
+<p>Clutch late overall play to help secure the win - last 4:21 of game 7 pts, 2 offensive rebounds, 2 steals and a big 3.</p>
+<p>9 points, 7 rebounds (4 offensive), 2 assists, 3 steals</p>
+<div class="video-item">
+<iframe allowfullscreen="" frameborder="0" height="180" src="https://www.youtube.com/embed/OiSgPDTcftc?si=XK6K60HkiwSmDqe_" title="Video 4" width="320"></iframe>
+<p><strong> May 18, 2025 vs. Midwest Stampede South (MI)
+            <p>Memphis, TN Showcase:</p></strong>
+<p>Solid all around game in last game of weekend.</p>
+<p>20 points (3/6 on 3s), 6 rebounds (3 offensive), 4 assists, 3 steals</p>
+<div class="video-item">
+<iframe allowfullscreen="" frameborder="0" height="180" src="https://www.youtube.com/embed/yAS9O3Wvl5w?si=bxSdyAsfhzjKPE1y" title="Video 5" width="320"></iframe>
+<p><strong> July 11, 2025 vs. Top Acheivers Elite (part 1) 
+            <p>GASO Live Championships</p></strong>
+<p>Solid defensive performance on 6'-10", 250lb+ center; hence part 2 at 2nd venue.
                  <p>5 points, 6 rebounds (4 offensive), 1 steal</p>
-
-            <div class="video-item">
-                <iframe width="320" height="180" src="https://www.youtube.com/embed/-RLT_tf6jZ8?si=nicJeKzXIbBMMtrS" 
-                    title="Video 6" frameborder="0" allowfullscreen></iframe>
-            <p><strong> July 11, 2025 vs. Top Acheivers Elite (part 2)</p>
-            <p>GASO Live Championships</strong>
-                 <p>Part 2 at 2nd venue.
+<div class="video-item">
+<iframe allowfullscreen="" frameborder="0" height="180" src="https://www.youtube.com/embed/-RLT_tf6jZ8?si=nicJeKzXIbBMMtrS" title="Video 6" width="320"></iframe>
+<p><strong> July 11, 2025 vs. Top Acheivers Elite (part 2)</strong></p>
+<p>GASO Live Championships
+<p>Part 2 at 2nd venue.
                  <p>5 points, 6 rebounds (4 offensive), 1 steal</p>
-
-            <div class="video-item">
-                <iframe width="320" height="180" src="TBD" 
-                    title="Video 7" frameborder="0" allowfullscreen></iframe>
-            <p><strong> December 21, 2024 vs. Stony Point</p>
-            <p>High School district game</strong>
-                 <p>Stony Point finished season 21st in state - helped lead team deep into 3rd quarter before losing the lead and momentum
+<div class="video-item">
+<iframe allowfullscreen="" frameborder="0" height="180" src="TBD" title="Video 7" width="320"></iframe>
+<p><strong> December 21, 2024 vs. Stony Point</strong></p>
+<p>High School district game
+<p>Stony Point finished season 21st in state - we led the majority of the game until losing momentum in the 4th
                  <p>21 points, 4 rebounds, 7 assists, 1 steal</p>
- 
-           <div class="video-item">
-                <iframe width="320" height="180" src="TBD" 
-                    title="Video 8" frameborder="0" allowfullscreen></iframe>
-            <p><strong> November 15, 2024 vs. LASA</p>
-            <p>High School preseason game</strong>
-                 <p>Solid shooting and defensive game
+<div class="video-item">
+<iframe allowfullscreen="" frameborder="0" height="180" src="TBD" title="Video 8" width="320"></iframe>
+<p><strong> November 15, 2024 vs. LASA</strong></p>
+<p>High School preseason game
+<p>Solid shooting and defensive game
                  <p>28 points (2/4 on 3s), 7 rebounds (3 offensive), 3 assists, 3 steals</p>
-
-
-            <div class="video-item">
-                <iframe width="320" height="180" src="TBD" 
-                    title="Video 9" frameborder="0" allowfullscreen></iframe>
-            <p><strong> November 18, 2024 vs. Georgetown</p>
-            <p>High School preseason game</strong>
-                 <p>Solid shooting and defensive game
+<div class="video-item">
+<iframe allowfullscreen="" frameborder="0" height="180" src="TBD" title="Video 9" width="320"></iframe>
+<p><strong> November 18, 2024 vs. Georgetown</strong></p>
+<p>High School preseason game
+<p>Solid shooting and defensive game
                  <p>27 points (3/5 on 3s), 6 rebounds (4 offensive), 2 steals</p>
+</p></p></div>
+<!-- Add more videos like this as needed -->
+</p></p></div></p></p></div></p></p></div></p></p></div></p></div></p></div></p></div></section>
 
 
-
-        </div>
-
-    <!-- Add more videos like this as needed -->
-</section>
-       
-
-        <section class="my-stats">
-     <h2>My Stats (from MaxPreps)</h2>
-
-    <table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
-        <tr style="background-color: #f2f2f2;">
-            <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Stat</th>
-            <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Sophomore Year per game</th>
-            <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Junior Year per game</th>
-            <th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Career Totals</th>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">Points</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">8.4</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">14.8</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">708</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">Assists</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">2.0</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">2.5</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">133</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">Rebounds</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">4.6</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">5.3</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">294</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">Field Goal %</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">48%</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">45%</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">46%</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">3pt Field Goal %</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">31%</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">36%</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">34%</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">Free Throw %</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">73%</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">79%</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">77%</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">Steals</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">0.7</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">1.2</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">57</td>
-        </tr>
-        <tr>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: left;">Blocks</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">0.3</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">0.3</td>
-            <td style="border: 1px solid #ddd; padding: 8px; text-align: center;">18</td>
-        </tr>        
-    </table>          
-        </section>
-
-        <section class="coach-contact">
-            <h2>Coach Contact Information</h2>
-            <table>
-                <tr>
-                    <th>Name / Year</th>
-                    <th>Phone Number</th>
-                    <th>Email Address</th>
-                </tr>
-                <tr>
-                    <td>Kenny Mann - upcoming Senior Year</td>
-                    <td><a href="mailto:kenny.mann@leanderisd.org"_blank">Email</a></td>
-                    <td><a href="tel:+19407688240"_blank">Phone</a></td>
-                </tr>
-                <tr>
-                    <td>James Moreno - Sopomore/Junior Year</td>
-                    <td><a href="mailto:james.moreno@leanderisd.org"_blank">Email</a></td>
-                    <td><a href="tel:+19153835950"_blank">Phone</a></td>
-                </tr>
-                <tr>
-                    <td>Sean Miller - 2025 Summer AAU</td>
-                    <td><a href="mailto:sean.miller@austinisd.org"_blank">Email</a></td>
-                    <td><a href="tel:+15127407846"_blank">Phone</a></td>
-                </tr>
-
-
-            </table>
-        </section>
-
-        <section class="upcoming-games">
-            <h2>Completed / Upcoming Schedule</h2>
-            <h2>Houston Hoops 17U Miller (AAU) & Leander Vista Ridge (TABC)</h2>
-            <table>
-                <tr>
-                    <th>Date</th>
-                    <th>Tournament/Showcase</th>
-                    <th>Location</th>
-                </tr>
-               <tr>
-                    <td>May 31 - June 1, 2025</td>
-                    <<td><a href="https://basketball.exposureevents.com/238537/gaso-bryan/teams/houston-hoops-centex-17u-miller?divisionteamid=4497117" target="_blank"> GASO BRYAN</td>
-                    <td>Round Rock, TX</td>
-                </tr>
-                <tr>
-                    <td>June 13-15, 2025</td>
-                    <<td><a href="https://basketball.exposureevents.com/238538/gaso-ctx-shoot-out/teams/houston-hoops-miller?divisionteamid=4547909" target="_blank"> GASO CTX Shoot-Out</td>
-                    <td>Round Rock, TX</td>
-                </tr>
-                <tr>
-                    <td>June 20-22, 2025</td>
-                    <td><a href="https://basketball.exposureevents.com/245857/leander-vista-ridge/documents/schedulestandingsbrackets?divisionteamid=4530353&divisionid=1194209" target="_blank"> TABC Boys Showcase</td>
-                    <td>Duncanville/Mansfield</td>
-                </tr>
-                <tr>  
-                    <td>July 5-6, 2025</td>
-                    <td><a href="https://letshoop.riseuptournaments.com/store?storeorganizationid=19059#event/team?eventid=237518&divisionteamid=4603912" target="_blank"> RiseUp Lonestar State</td>
-                    <td>Austin, TX</td>
-                </tr>
-                <tr>
-                    <td>July 10-13, 2025</td>
-                    <td><a href="https://basketball.exposureevents.com/238543/gaso-live-summer-championships/teams/houston-hoops-centex-miller?divisionteamid=4612757" target="_blank"> GASO - Live Summer Championships</td>
-                    <td>Duncanville, TX</td>
-                </tr>
-                <tr>
-                    <td>TBD</td>
-                    <td>High School Fall League</td>
-                    <td>Round Rock, TX</td>
-                </tr>
-
-
-
-            </table>
-        </section>
-
-        <section class="connect-with-me">
-            <h2>Connect With Me</h2>
-            <a href="https://twitter.com/gavinhoward24" target="_blank">Twitter / X</a>
-            <a href="https://instagram.com/gavinhoward24" target="_blank">Instagram</a>
-            <a href="https://www.maxpreps.com/tx/cedar-park/vista-ridge-rangers/athletes/gavin-howard/?careerid=ocm0a8p8bq2ff"_blank">MaxPreps</a>
-            <a href="mailto:gavinhoward082107@gmail.com"_blank">Email</a>
-            <a href="tel:+15126634257"_blank">(512) 663-4257</a>
-        </section>
-
-       
-        <section class="contact-me">
-    <h2>Contact Me</h2>
-    <form action="https://formspree.io/f/xkgrdqkn" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-        <input type="submit" value="Send Message">
-    </form>
+<section class="my-stats collapsible" id="stats">
+<h2>MY STATS (from MaxPreps)</h2>
+<table style="width:100%; border-collapse: collapse; margin-bottom: 20px;">
+<tr style="background-color: #f2f2f2;">
+<th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Stat</th>
+<th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Sophomore Year per game</th>
+<th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Junior Year per game</th>
+<th style="border: 1px solid #ddd; padding: 8px; text-align: center;">Career Totals</th>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: left;">Points</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">8.4</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">14.8</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">708</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: left;">Assists</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">2.0</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">2.5</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">133</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: left;">Rebounds</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">4.6</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">5.3</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">294</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: left;">Field Goal %</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">48%</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">45%</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">46%</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: left;">3pt Field Goal %</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">31%</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">36%</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">34%</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: left;">Free Throw %</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">73%</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">79%</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">77%</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: left;">Steals</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">0.7</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">1.2</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">57</td>
+</tr>
+<tr>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: left;">Blocks</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">0.3</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">0.3</td>
+<td style="border: 1px solid #ddd; padding: 8px; text-align: center;">18</td>
+</tr>
+</table>
 </section>
 
-        <section class="photo-gallery">
-            <h2>Photo Gallery</h2>
-            <div class="gallery-grid">
-  
-                <img src="https://i.postimg.cc/m1tLRWhf/IMG-3116.jpg" alt="photo">
-                <img src="https://i.postimg.cc/DmMf60Y2/IMG-4071.jpg" alt="photo">
-                <img src="https://i.postimg.cc/fkTk56zv/1-C6-A0736-copy.jpg" alt="photo">
+
+<section class="coach-contact collapsible" id="coach">
+<h2>COACH CONTACT INFORMATION</h2>
+<table>
+<tr>
+<th>Name / Year</th>
+<th>Phone Number</th>
+<th>Email Address</th>
+</tr>
+<tr>
+<td>Kenny Mann - upcoming Senior Year</td>
+<td><a _blank"="" href="mailto:kenny.mann@leanderisd.org">Email</a></td>
+<td><a _blank"="" href="tel:+19407688240">Phone</a></td>
+</tr>
+<tr>
+<td>James Moreno - Sopomore/Junior Year</td>
+<td><a _blank"="" href="mailto:james.moreno@leanderisd.org">Email</a></td>
+<td><a _blank"="" href="tel:+19153835950">Phone</a></td>
+</tr>
+<tr>
+<td>Sean Miller - 2025 Summer AAU</td>
+<td><a _blank"="" href="mailto:sean.miller@austinisd.org">Email</a></td>
+<td><a _blank"="" href="tel:+15127407846">Phone</a></td>
+</tr>
+</table>
+</section>
 
 
-                <img src="https://i.postimg.cc/75vHvckd/IMG-4080.jpg" alt="photo">
-                <img src="https://i.postimg.cc/mcsg9npC/1C6A0662.jpg" alt="photo">
-                <img src="https://i.postimg.cc/cKB4BcPj/1C6A0676.jpg" alt="photo">
+<section class="upcoming-games collapsible" id="schedule">
+<h2>COMPLETED / UPCOMING SCHEDULE</h2>
+<h2>Houston Hoops 17U Miller (AAU) &amp; Leander Vista Ridge (TABC)</h2>
+<table>
+<tr>
+<th>Date</th>
+<th>Tournament/Showcase</th>
+<th>Location</th>
+</tr>
+<tr>
+<td>May 31 - June 1, 2025</td>
+                    &lt;<td><a href="https://basketball.exposureevents.com/238537/gaso-bryan/teams/houston-hoops-centex-17u-miller?divisionteamid=4497117" target="_blank"> GASO BRYAN</a></td>
+<td>Round Rock, TX</td>
+</tr>
+<tr>
+<td>June 13-15, 2025</td>
+                    &lt;<td><a href="https://basketball.exposureevents.com/238538/gaso-ctx-shoot-out/teams/houston-hoops-miller?divisionteamid=4547909" target="_blank"> GASO CTX Shoot-Out</a></td>
+<td>Round Rock, TX</td>
+</tr>
+<tr>
+<td>June 20-22, 2025</td>
+<td><a href="https://basketball.exposureevents.com/245857/leander-vista-ridge/documents/schedulestandingsbrackets?divisionteamid=4530353&amp;divisionid=1194209" target="_blank"> TABC Boys Showcase</a></td>
+<td>Duncanville/Mansfield</td>
+</tr>
+<tr>
+<td>July 5-6, 2025</td>
+<td><a href="https://letshoop.riseuptournaments.com/store?storeorganizationid=19059#event/team?eventid=237518&amp;divisionteamid=4603912" target="_blank"> RiseUp Lonestar State</a></td>
+<td>Austin, TX</td>
+</tr>
+<tr>
+<td>July 10-13, 2025</td>
+<td><a href="https://basketball.exposureevents.com/238543/gaso-live-summer-championships/teams/houston-hoops-centex-miller?divisionteamid=4612757" target="_blank"> GASO - Live Summer Championships</a></td>
+<td>Duncanville, TX</td>
+</tr>
+<tr>
+<td>TBD</td>
+<td>High School Fall League</td>
+<td>Round Rock, TX</td>
+</tr>
+</table>
+</section>
 
 
-                <img src="https://i.postimg.cc/JyxMkzkC/IMG-4084.jpg" alt="photo">
-                <img src="https://i.postimg.cc/Wt3b0g8W/IMG-3120.webp" alt="photo">
-                <img src="https://i.postimg.cc/34bhtf1L/IMG-4085.jpg" alt="photo">
+<section class="connect-with-me collapsible" id="connect">
+<h2>CONNECT WITH ME</h2>
+<a href="https://twitter.com/gavinhoward24" target="_blank">Twitter / X</a>
+<a href="https://instagram.com/gavinhoward24" target="_blank">Instagram</a>
+<a _blank"="" href="https://www.maxpreps.com/tx/cedar-park/vista-ridge-rangers/athletes/gavin-howard/?careerid=ocm0a8p8bq2ff">MaxPreps</a>
+<a _blank"="" href="mailto:gavinhoward082107@gmail.com">Email</a>
+<a _blank"="" href="tel:+15126634257">(512) 663-4257</a>
+</section>
 
 
-                <img src="https://i.postimg.cc/CnBgXC6w/IMG-4086.jpg" alt="photo">
-                <img src="https://i.postimg.cc/XG2jTYjk/IMG-1975.jpg" alt="photo">
-                <img src="https://i.postimg.cc/FfNhzL1x/IMG-4082.jpg" alt="photo">
+<section class="contact-me collapsible" id="contact">
+<h2>CONTACT ME</h2>
+<form action="https://formspree.io/f/xkgrdqkn" method="POST">
+<input name="name" placeholder="Your Name" required="" type="text"/>
+<input name="email" placeholder="Your Email" required="" type="email"/>
+<textarea name="message" placeholder="Your Message" required="" rows="5"></textarea>
+<input type="submit" value="Send Message"/>
+</form>
+</section>
 
 
-                <img src="https://i.postimg.cc/sMpV3cfX/IMG-4081.jpg" alt="photo">
-
-           
-            </div>
-        </section>
-
-
-    </div>
-
-    <footer>
-        <p>© 2025 Gavin Howard | All Rights Reserved</p>
-        <div style="text-align: center; margin-top: 20px;">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png" alt="Basketball Icon" width="30" style="vertical-align: middle; margin-right: 6px;">
-  <img src="https://hitwebcounter.com/counter/counter.php?page=YOUR_UNIQUE_PAGE_ID&style=0036&nbdigits=5&type=ip&initCount=0"
-      title="Page Views" Alt="web counter" style="vertical-align: middle;" />
+<section class="photo-gallery collapsible" id="gallery">
+<center><h2>PHOTO GALLERY</h2></center>
+<div class="gallery-grid">
+<img alt="photo" src="https://i.postimg.cc/m1tLRWhf/IMG-3116.jpg"/>
+<img alt="photo" src="https://i.postimg.cc/DmMf60Y2/IMG-4071.jpg"/>
+<img alt="photo" src="https://i.postimg.cc/fkTk56zv/1-C6-A0736-copy.jpg"/>
+<img alt="photo" src="https://i.postimg.cc/75vHvckd/IMG-4080.jpg"/>
+<img alt="photo" src="https://i.postimg.cc/mcsg9npC/1C6A0662.jpg"/>
+<img alt="photo" src="https://i.postimg.cc/cKB4BcPj/1C6A0676.jpg"/>
+<img alt="photo" src="https://i.postimg.cc/JyxMkzkC/IMG-4084.jpg"/>
+<img alt="photo" src="https://i.postimg.cc/Wt3b0g8W/IMG-3120.webp"/>
+<img alt="photo" src="https://i.postimg.cc/34bhtf1L/IMG-4085.jpg"/>
+<img alt="photo" src="https://i.postimg.cc/CnBgXC6w/IMG-4086.jpg"/>
+<img alt="photo" src="https://i.postimg.cc/XG2jTYjk/IMG-1975.jpg"/>
+<img alt="photo" src="https://i.postimg.cc/FfNhzL1x/IMG-4082.jpg"/>
+<img alt="photo" src="https://i.postimg.cc/sMpV3cfX/IMG-4081.jpg"/>
 </div>
-    </footer>
+</section>
+
+
+</div>
+<footer>
+<p>© 2025 Gavin Howard | All Rights Reserved</p>
+<div style="text-align: center; margin-top: 20px;">
+<img alt="Basketball Icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png" style="vertical-align: middle; margin-right: 6px;" width="30"/>
+<img alt="web counter" src="https://hitwebcounter.com/counter/counter.php?page=YOUR_UNIQUE_PAGE_ID&amp;style=0036&amp;nbdigits=5&amp;type=ip&amp;initCount=0" style="vertical-align: middle;" title="Page Views">
+</img></div>
+</footer>
 </body>
 </html>
