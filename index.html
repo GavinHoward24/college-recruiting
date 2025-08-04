@@ -26,13 +26,13 @@
             margin: 0;
         }
         .container {
-            max-width: 800px;
+            max-width: 975px;
             margin: 0 auto;
             padding: 20px;
         }
         section {
             background: white;
-            margin-bottom: 20px;
+            margin-bottom: 10px;
             padding: 15px;
             border-radius: 5px;
             box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -42,7 +42,8 @@
         }
 
         .about-me {
-            text-align: center
+            text-align: justifiy
+
         }
 
         .highlight-reels {
@@ -50,7 +51,7 @@
         }
         .highlight-reels iframe {
             width: 100%;
-            height: 500px;
+            height: 400px;
             border: none;
         }
 
@@ -145,6 +146,7 @@
 
         .coach-contact { 
             text-align: center;
+            border-collapse: collapse;
         }
 
         .coach-contact table {
@@ -152,7 +154,7 @@
             border-collapse: collapse;
  
         }
-        .coach-contact th, .upcoming-games td {
+        .coach-contact th, .coach-contact td {
             border: 1px solid #ddd;
             padding: 8px;
             text-align: center;
@@ -191,6 +193,24 @@
             text-decoration: none;
             font-size: 1.2em;
         }
+
+
+.connect-with-me table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .connect-with-me th, .connect-with-me td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .connect-with-me th {
+            background-color: #2c3e50;
+            color: white;
+        }
+
+
+
         .connect-with-me a:hover {
             color: #2c3e50;
         }
@@ -228,11 +248,10 @@
             bottom: 0;
         }
     </style>
-
 <style>
     body {
         font-family: 'Segoe UI', sans-serif;
-        background: url('https://www.transparenttextures.com/patterns/hexellence.png');
+        background: url('https://www.transparenttextures.com/patterns/binding-dark.png');
         background-color: #e8eff5;
         color: #333;
         margin: 0;
@@ -290,12 +309,40 @@
         cursor: pointer;
         font-size: 1.2em;
     }
+
+section.collapsible {
+
+    transition: all 0.6s ease-in-out;
+}
+section.collapsible.closed {
+    max-height: 0 !important;
+    overflow: hidden;
+    opacity: 0;
+    transition: all 0.6s ease-in-out;
+    padding: 0 !important;
+    margin: 0 !important;
+    pointer-events: none;
+}
+
+.collapsible {
+    display: none;
+}
 </style>
 <script>
-    function toggleSection(id) {
-        const el = document.getElementById(id);
-        if (el) el.classList.toggle('closed');
-    }
+function toggleSection(id) {
+    const sections = document.querySelectorAll('.collapsible');
+    sections.forEach(section => {
+        if (section.id === id) {
+            section.style.display = 'block';
+        } else {
+            section.style.display = 'none';
+        }
+    });
+}
+window.onload = function() {
+    const sections = document.querySelectorAll('.collapsible');
+    sections.forEach(section => section.style.display = 'none');
+};
 </script>
 </head>
 <body>
@@ -318,12 +365,11 @@
 
 <div class="container">
 <section class="about-me collapsible" id="about">
-<h2>ABOUT ME</h2>
+<h2><center>ABOUT ME</center></h2>
 <p>My name is Gavin Howard, I’m a high school basketball player from Austin, TX, with a strong interest in competing at the collegiate level. I currently play for Vista Ridge High School in Cedar Park, TX, entering my senior year. During the summer, I competed with Houston Hoops CTX 17U Miller. Standing at 6’5” and weighing 190 pounds, I’m focused on elevating my play this fall to enhance my performance for the upcoming season.</p>
 <p>On the court, I’m a versatile wing, I play shooting guard, small forward and power forward for both my school and club teams. I’m capable of guarding all five positions and often help bring the ball up to initiate the offense. During my junior year, I earned First-Team All-District honors in Region 25-6A. As I approach my senior year, my goal is to secure District MVP recognition. Having started on varsity as a sophomore and junior, I’ve been honored to serve as a team captain in both years. I strive to lead by example, foster inclusivity with younger players and cultivate a positive team environment to earn the respect of my teammates. For my senior season, I aim to surpass 1,250 career points and help guide our program to the playoffs for the first time since 2017.</p>
 <p>Academically, I’m a member of the National Honor Society, maintaining a 3.9 GPA and a 4.9 weighted GPA. I scored 1260 on my SAT (600 Writing, 660 Math) and have earned and will contrinue to earn dual credit hours through courses at my local community college.</p>
 <p>Thank you for considering my profile. I would welcome the opportunity to meet and discuss how I could contribute to your program after graduating in 2026. Please let me know if there’s additional information or footage you’d like to review to assess my fit for your team. I’m confident that, given the chance, I can make a meaningful impact on your program.</p>
-<p>Below, I’ve included highlight films from my junior year of high school, TABC Showcase and my summer AAU season. I’ll continue to update these highlights as the Fall progresses. Additionally, I’ve provided a completed schedule of my team’s upcoming/completed events, should you like to see the recap or have the opportunity to watch me play in person.</p>
 </section>
 
 
@@ -335,8 +381,9 @@
 
 
 <section class="video-showcase collapsible" id="games">
-<h2><font color="white">GAME FOOTAGE</font></h2>
-<p>Below are full game videos</p>
+<h2><font color="white">FULL GAME FOOTAGE</font></h2>
+<p>Click on the game below to see full game</p>
+
 <div class="video-item">
 <iframe allowfullscreen="" frameborder="0" height="180" src="https://www.youtube.com/embed/yTlKD3NvHEI?si=nOfp_jMWAJW_i2c4" title="Video 1" width="320"></iframe>
 <p><strong>April 19, 2025 vs. Young Pro Rodgers
@@ -344,57 +391,74 @@
 <p>Strong all-around performance against a team with bigger centers - transition finishes and solid rebounding.</p>
 <p>11 points, 7 rebounds (3 offensive), 1 assist, 3 steals</p>
 </p></div>
+
 <div class="video-item">
 <iframe allowfullscreen="" frameborder="0" height="180" src="https://www.youtube.com/embed/U6q8vU4n2yk?si=Qh5MhgR3HTSQdLK0" title="Video 2" width="320"></iframe>
 <p><strong> May 4, 2025 vs. BTB Unsigned (Robles)
             <p>Alamo City Hoops - Capitol City Showdown</p></strong>
 <p>Strong 3 point shooting, solid rebounding and team-oriented playmaking.</p>
 <p>22 points (4/5 on 3s), 8 rebounds (3 offensive), 5 assists</p>
+</p></div>
+
 <div class="video-item">
 <iframe allowfullscreen="" frameborder="0" height="180" src="https://www.youtube.com/embed/8eie5rth8xE?si=midzhNSZoUNqaQAd" title="Video 3" width="320"></iframe>
 <p><strong> July 10, 2025 vs. Dallas Longhorns 2026:
             <p>GASO Live Championships</p></strong>
 <p>Clutch late overall play to help secure the win - last 4:21 of game 7 pts, 2 offensive rebounds, 2 steals and a big 3.</p>
 <p>9 points, 7 rebounds (4 offensive), 2 assists, 3 steals</p>
+</p></div>
+
 <div class="video-item">
 <iframe allowfullscreen="" frameborder="0" height="180" src="https://www.youtube.com/embed/OiSgPDTcftc?si=XK6K60HkiwSmDqe_" title="Video 4" width="320"></iframe>
 <p><strong> May 18, 2025 vs. Midwest Stampede South (MI)
             <p>Memphis, TN Showcase:</p></strong>
 <p>Solid all around game in last game of weekend.</p>
 <p>20 points (3/6 on 3s), 6 rebounds (3 offensive), 4 assists, 3 steals</p>
+</p></div>
+
 <div class="video-item">
 <iframe allowfullscreen="" frameborder="0" height="180" src="https://www.youtube.com/embed/yAS9O3Wvl5w?si=bxSdyAsfhzjKPE1y" title="Video 5" width="320"></iframe>
 <p><strong> July 11, 2025 vs. Top Acheivers Elite (part 1) 
             <p>GASO Live Championships</p></strong>
 <p>Solid defensive performance on 6'-10", 250lb+ center; hence part 2 at 2nd venue.
                  <p>5 points, 6 rebounds (4 offensive), 1 steal</p>
+</p></div>
+
 <div class="video-item">
 <iframe allowfullscreen="" frameborder="0" height="180" src="https://www.youtube.com/embed/-RLT_tf6jZ8?si=nicJeKzXIbBMMtrS" title="Video 6" width="320"></iframe>
 <p><strong> July 11, 2025 vs. Top Acheivers Elite (part 2)</strong></p>
 <p>GASO Live Championships
 <p>Part 2 at 2nd venue.
                  <p>5 points, 6 rebounds (4 offensive), 1 steal</p>
+</p></div>
+
 <div class="video-item">
 <iframe allowfullscreen="" frameborder="0" height="180" src="TBD" title="Video 7" width="320"></iframe>
 <p><strong> December 21, 2024 vs. Stony Point</strong></p>
 <p>High School district game
 <p>Stony Point finished season 21st in state - we led the majority of the game until losing momentum in the 4th
                  <p>21 points, 4 rebounds, 7 assists, 1 steal</p>
+</p></div>
+
 <div class="video-item">
 <iframe allowfullscreen="" frameborder="0" height="180" src="TBD" title="Video 8" width="320"></iframe>
 <p><strong> November 15, 2024 vs. LASA</strong></p>
 <p>High School preseason game
 <p>Solid shooting and defensive game
                  <p>28 points (2/4 on 3s), 7 rebounds (3 offensive), 3 assists, 3 steals</p>
+</p></div>
+
 <div class="video-item">
 <iframe allowfullscreen="" frameborder="0" height="180" src="TBD" title="Video 9" width="320"></iframe>
 <p><strong> November 18, 2024 vs. Georgetown</strong></p>
 <p>High School preseason game
 <p>Solid shooting and defensive game
                  <p>27 points (3/5 on 3s), 6 rebounds (4 offensive), 2 steals</p>
+</p></div>
+
 </p></p></div>
 <!-- Add more videos like this as needed -->
-</p></p></div></p></p></div></p></p></div></p></p></div></p></div></p></div></p></div></section>
+</section>
 
 
 <section class="my-stats collapsible" id="stats">
@@ -496,12 +560,12 @@
 </tr>
 <tr>
 <td>May 31 - June 1, 2025</td>
-                    &lt;<td><a href="https://basketball.exposureevents.com/238537/gaso-bryan/teams/houston-hoops-centex-17u-miller?divisionteamid=4497117" target="_blank"> GASO BRYAN</a></td>
+<td><a href="https://basketball.exposureevents.com/238537/gaso-bryan/teams/houston-hoops-centex-17u-miller?divisionteamid=4497117" target="_blank"> GASO BRYAN</a></td>
 <td>Round Rock, TX</td>
 </tr>
 <tr>
 <td>June 13-15, 2025</td>
-                    &lt;<td><a href="https://basketball.exposureevents.com/238538/gaso-ctx-shoot-out/teams/houston-hoops-miller?divisionteamid=4547909" target="_blank"> GASO CTX Shoot-Out</a></td>
+<td><a href="https://basketball.exposureevents.com/238538/gaso-ctx-shoot-out/teams/houston-hoops-miller?divisionteamid=4547909" target="_blank"> GASO CTX Shoot-Out</a></td>
 <td>Round Rock, TX</td>
 </tr>
 <tr>
@@ -530,11 +594,11 @@
 
 <section class="connect-with-me collapsible" id="connect">
 <h2>CONNECT WITH ME</h2>
-<a href="https://twitter.com/gavinhoward24" target="_blank">Twitter / X</a>
-<a href="https://instagram.com/gavinhoward24" target="_blank">Instagram</a>
-<a _blank"="" href="https://www.maxpreps.com/tx/cedar-park/vista-ridge-rangers/athletes/gavin-howard/?careerid=ocm0a8p8bq2ff">MaxPreps</a>
-<a _blank"="" href="mailto:gavinhoward082107@gmail.com">Email</a>
-<a _blank"="" href="tel:+15126634257">(512) 663-4257</a>
+            <a href="https://twitter.com/gavinhoward24" target="_blank">Twitter / X</a>
+            <a href="https://instagram.com/gavinhoward24" target="_blank">Instagram</a>
+            <a href="https://www.maxpreps.com/tx/cedar-park/vista-ridge-rangers/athletes/gavin-howard/?careerid=ocm0a8p8bq2ff" target="_blank">MaxPreps</a>
+            <a href="mailto:gavinhoward082107@gmail.com"_blank">Email</a>
+            <a href="tel:+15126634257"_blank">(512) 663-4257</a>
 </section>
 
 
@@ -567,15 +631,13 @@
 <img alt="photo" src="https://i.postimg.cc/sMpV3cfX/IMG-4081.jpg"/>
 </div>
 </section>
-
-
 </div>
 <footer>
 <p>© 2025 Gavin Howard | All Rights Reserved</p>
 <div style="text-align: center; margin-top: 20px;">
 <img alt="Basketball Icon" src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Basketball.png" style="vertical-align: middle; margin-right: 6px;" width="30"/>
-<img alt="web counter" src="https://hitwebcounter.com/counter/counter.php?page=YOUR_UNIQUE_PAGE_ID&amp;style=0036&amp;nbdigits=5&amp;type=ip&amp;initCount=0" style="vertical-align: middle;" title="Page Views">
-</img></div>
+<img alt="web counter" src="https://hitwebcounter.com/counter/counter.php?page=YOUR_UNIQUE_PAGE_ID&amp;style=0036&amp;nbdigits=5&amp;type=ip&amp;initCount=0" style="vertical-align: middle;" title="Page Views"/>
+</div>
 </footer>
 </body>
 </html>
